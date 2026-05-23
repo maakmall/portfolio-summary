@@ -8,11 +8,11 @@ export async function POST(request: Request) {
     const correctPassword = process.env.DASHBOARD_PASSWORD;
 
     if (!correctPassword) {
-      return NextResponse.json({ error: "Server password env belum diset" }, { status: 500 });
+      return NextResponse.json({ error: "Server password env not set" }, { status: 500 });
     }
 
     if (password !== correctPassword) {
-      return NextResponse.json({ error: "Password salah, Mal!" }, { status: 401 });
+      return NextResponse.json({ error: "Invalid password" }, { status: 401 });
     }
 
     // Generate token valid
