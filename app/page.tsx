@@ -225,7 +225,7 @@ export default function Home() {
               {loading ? (
                 <span className="w-3.5 h-3.5 border-2 border-white border-t-transparent rounded-full animate-spin" />
               ) : (
-                <>↻ Refresh</>
+                <>↻ <span className="hidden md:inline">Refresh</span></>
               )}
             </button>
 
